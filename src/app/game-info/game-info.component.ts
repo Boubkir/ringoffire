@@ -10,7 +10,7 @@ export class GameInfoComponent {
     {
       title: 'Waterfall',
       description:
-        'Everyone has to start Push Up  at the same time. As soon as player 1 stops drinking, player 2 may stop drinking. Player 3 may stop as soon as player 2 stops drinking, and so on.',
+        'Everyone has to start Push Up  at the same time. As soon as player 1 stops pushing, player 2 may stop pushing. Player 3 may stop as soon as player 2 stops pushing, and so on.',
     },
     { title: 'You', description: 'You decide who will Push Up ' },
     { title: 'Me', description: 'Congrats! 20 Push Up`s!' },
@@ -34,7 +34,7 @@ export class GameInfoComponent {
       description:
         'Pick a mate. Your mate must always Push Up when you Push Up and the other way around.',
     },
-    { title: 'Thumbmaster', description: '' },
+    { title: 'Thumbmaster', description: 'Blibla blub' },
     { title: 'Men', description: 'All men so Sit Up´s.' },
     { title: 'Quizmaster', description: '' },
     {

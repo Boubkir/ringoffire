@@ -12,6 +12,7 @@ export class GameComponent implements OnInit {
   pickCardAnimation: boolean = false;
   currentCard: any = '';
   game: Game = new Game();
+  cardAudio = new Audio('assets/audio/deal-card.mp3');
 
   constructor(public dialog: MatDialog) {}
 
@@ -25,9 +26,9 @@ export class GameComponent implements OnInit {
 
   takeCard() {
     if (!this.pickCardAnimation) {
+       this.cardAudio.play();
       this.currentCard = this.game.stack.pop();
       this.pickCardAnimation = true;
-
       this.game.currentPlayer++;
       this.game.currentPlayer =
         this.game.currentPlayer % this.game.players.length;
