@@ -34,7 +34,7 @@ export class GameComponent implements OnInit {
         .valueChanges()
         .subscribe((game: any) => {
           console.log('Game update', game);
-          this.game.currentPlayer = game.currentPlayer;
+          this.game.currentPlayer = game.currentPlayer  || 0;
           this.game.playedCards = game.playedCards;
           this.game.players = game.players;
           this.game.stack = game.stack;
@@ -55,7 +55,7 @@ export class GameComponent implements OnInit {
       this.game.pickCardAnimation = true;
       this.game.currentPlayer++;
       this.game.currentPlayer =
-      this.game.currentPlayer % this.game.players.length;
+        this.game.currentPlayer % this.game.players.length;
       this.saveGame();
 
       setTimeout(() => {
