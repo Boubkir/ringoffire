@@ -49,7 +49,7 @@ export class GameComponent implements OnInit {
   }
 
   takeCard() {
-    if (!this.game.pickCardAnimation) {
+    if (!this.game.pickCardAnimation && this.game.players.length >= 1 ) {
       this.cardAudio.play();
       this.game.currentCard = this.game.stack.pop();
       this.game.pickCardAnimation = true;
